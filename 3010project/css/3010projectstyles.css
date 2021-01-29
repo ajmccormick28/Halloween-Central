@@ -1,0 +1,238 @@
+/* 3010ProjectStyles.css Andrew McCormick */
+
+/* For the current webpage button */
+a.active{
+	background-color: purple;
+	color: white;
+}
+
+/* Non-active webpage buttons */
+a.static {
+	background-color: green;
+	color: white;
+}
+
+/* When user hovers over a button, changes color */
+a:hover {
+    background-color: #cc6600;
+    color: black;
+	border: 5px inset black;
+}
+
+
+
+/* Used for centering boxes and pictures */
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+/* Settings for font */
+.font {
+	font-family: 'Tillana';
+	color: white;
+}
+/* Setting for Regstration Buttons */
+#buttons {
+	color: black;
+}
+
+/* Setting for Context boxes */
+#content {
+	text-align: justify;
+}
+
+/* Used to divide the menu, contents and footer */
+#divider {
+	border-top-color: #7a00cc;
+	border-top-style: groove;
+	border-top-width: 10px;
+}
+
+/* Styling for ghost1 animation */
+#ghost1 {
+	height: auto;
+	max-width: 100px;
+    animation-name: ghost1;
+    animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	background-color: transparent;
+	position: relative;
+	animation-timing-function: linear;
+	animation-delay: 2s;
+}
+
+/* Styling for ghost2 animation */
+#ghost2 {
+	height: auto;
+	max-width: 100px;
+    animation-name: ghost2;
+    animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	background-color: transparent;
+	position: relative;
+	animation-timing-function: linear;
+	animation-delay: 2s;
+}
+
+/* Setting for the Header */
+#header {
+	background-color: #cc6600;
+	border-bottom-style: groove;
+	border-bottom-width: 10px;
+	border-bottom-color: #7a00cc;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-family: 'Eater';
+	font-size: 3vw;
+}
+
+/* Settings for poem on home page */
+#poem {
+	text-align: center;
+	font-family: 'Tillana';
+	color: white;
+	text-shadow: 1px 1px 2px black;
+}
+
+/* Styling for pumpkin1 animation */
+#pumpkin1 {
+	height: auto;
+	max-width: 100px;
+    animation-name: anipumpkin;
+    animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	background-color: transparent;
+	position: relative;
+}
+
+/* Stylings for page titles */
+#title {
+	text-align: center;
+	position: relative;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+/* Stylings for picture in title */
+#titlepic {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	height: auto;
+	max-width: 400px;
+}
+
+/* Animation for ghost1 animation */
+@keyframes ghost1 {
+	0%   {left:0px; top:0px; opacity: 0;}
+    25%  {left:1000px; top:200px; opacity: 1;}
+    50%  {left:400px; top:100px; opacity: 0;}
+    75%  {left:200px; top:200px; opacity: 0;}
+    100% {left:100px; top:0px; opacity: 1;}
+}
+
+/* Animation for ghost2 animation */
+@keyframes ghost2 {
+	0%   {left:0px; top:0px; opacity: 0;}
+    25%  {left:800px; top:300px; opacity: 1;}
+    50%  {left:300px; top:100px; opacity: 0;}
+    75%  {left:200px; top:200px; opacity: 0;}
+    100% {left:900px; top:150px; opacity: 1;}
+
+}
+
+/* Animation for pumpkin1 animation */
+@keyframes anipumpkin{
+	0%   {left:0px; top:0px; transform: rotate(0deg);}
+    20%  {left:200px; top:0px; transform: rotate(360deg);}
+    40%  {left:400px; top:0px; transform: rotate(720deg);}
+    60%  {left:600px; top:0px; transform: rotate(1080deg);}
+	80%  {left:800px; top:0px; transform: rotate(1440deg);}
+    100% {left:1000px; top:0px; transform: rotate(1800deg);}
+}
+
+/* Settings for link buttons */
+a {
+	display: block;
+	padding: 5px;
+	border: 5px outset black;
+	margin: 0;
+	border-radius: 20px;
+	text-align: center;
+	color: white;
+	font-family: 'Tillana';
+	font-size: 15px;
+	width: auto;
+}
+
+/* background image */
+body {
+	background-image: url("../pics/brick.jpg");
+}
+
+/* Styling for images to auto-resize */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styling for lists */
+ul {
+	padding: 0;
+	list-style-type: none;
+	margin: 0;
+	height: 100%;
+	width: auto;	
+}
+
+/* Styling for list items */
+li {
+	padding: 15px;
+}
+
+.moveRight {
+	right: 600px;
+}
+
+.abs {
+	position: abs;
+}
+
+.rel {
+	position: rel;
+}
+
+.moveBottom {
+	bottom: 200px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+}

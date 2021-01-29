@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- CSS Style Sheet Project1 -->
+		<link rel="stylesheet" type="text/css" href="./css/3010projectstyles.css">
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!-- Google Font Eater -->
+		<link href='https://fonts.googleapis.com/css?family=Eater' rel='stylesheet'>
+		<!-- Google Font Tillana -->
+		<link href='https://fonts.googleapis.com/css?family=Tillana' rel='stylesheet'>
+		<!-- JavaScript File -->
+		<script src="./js/3010project.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<title>Halloween Central</title>
+	</head>
+	
+	<body>
+	<?php 
+		include '3010projectformval.php';
+		echo '<p>Hello World</p>';
+		?>
+	
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12" id="header">
+					<!-- Title Picture -->
+					<img src="./pics/hallowwoodghost.PNG" alt="Halloween Central" id="titlepic" class="center"> 
+					<h1 id="title">Registration</h1>
+				</div>
+			</div>
+			<div class="row">
+			
+			<div class="row">
+				<div class="col-xs-12 col-sm-3 col-md-3" id="menu">
+					<ul>
+						<!-- Home Button -->
+						<li><a href="3010projecthome.html" target="_self" class="static">Home</a></li>
+						<!-- Registration Button -->
+						<li><a href="3010projectregistration.html" target="_self" class="active">Registration</a></li>
+						<!-- Animations Button -->
+						<li><a href="3010projectanimations.html" target="_self" class="static">Animations</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-9 col-md-9" id="content">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-6">
+							<div class="center">
+								<!-- Removed onsumit="return formVal();" and added nonvalidate -->
+								<form method="post" novalidate 
+								action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+									<!-- Username removed onblur="checkUsername(this);" -->
+									<label for="username" class="font">Username:</label>
+									<br/>
+									<input id="username" name="username" type="text" 
+										placeholder=" ex. JWalk" 
+										size="25" maxlength="50" 
+										required="required"
+										value="<?php echo $username; ?>"/>
+										<span class="error">* <?php echo $userNameErr;?></span>
+									<br/>
+									<!-- Password removed onblur="checkPassword(this);"-->
+									<label for="password" class="font">Password:</label>
+									<br/>
+									<input id="password" name="password"
+										type="password" size="25" 
+										maxlength="50"
+										required="required"/>
+									<p id="msg"></p>
+									<br/>
+									<!-- Repeat Password removed onblur="checkRePassword(this);"-->
+									<label for="repassword" class="font">Repeat Password:</label>
+									<br/>
+									<input id="repassword" name="repassword"
+										type="password" maxlength="50" 
+										size="25" required="required"/>
+									<p id="rePassWordMes"></p>
+									<p id="passwordMat"></p>	
+									<br/>
+									<!-- First Name -->
+									<label for="firstname" class="font">First Name:</label>
+									<br/>
+									<input id="firstname" name="firstname" type="text" 
+										placeholder=" ex. Johnny" 
+										size="25" maxlength="50"
+										required="required"/>
+									<br/>
+									<!-- Last Name -->
+									<label for="lastname" class="font">Last Name:</label>
+									<br/>
+									<input id="lastname" name="lastname" type="text" 
+										placeholder=" ex. Walker" 
+										size="25" maxlength="50"
+										required="required"/>
+									<br/>
+									<!-- Address 1 -->
+									<label for="address1" class="font">Address 1:</label>
+									<br/>
+									<input id="address1" name="address1" type="text"  
+										size="25" maxlength="100"
+										required="required"/>
+									<br/>
+									<label for="address2" class="font">Address 2:</label>
+									<br/>
+									<!-- Address 2 -->
+									<input id="address2" name="address2" type="text"  
+										size="25" maxlength="100"/>
+									<br/>
+									<!-- City -->
+									<label for="city" class="font">City:</label>
+									<br/>
+									<input id="city" name="city" type="text"  
+										size="25" maxlength="50"
+										required="required"/>
+									<br/>
+									<!-- State -->
+									<label for="State" class="font">State:</label>
+									<br/>
+									<select name="state" required="required">
+										<option value="">Please Select</option>
+										<option value="AL">AL</option>
+										<option value="AK">AK</option>
+										<option value="AZ">AZ</option>
+										<option value="AR">AR</option>
+										<option value="CA">CA</option>
+										<option value="CO">CO</option>
+										<option value="CT">CT</option>
+										<option value="DE">DE</option>
+										<option value="FL">FL</option>
+										<option value="GA">GA</option>
+										<option value="HI">HI</option>
+										<option value="ID">ID</option>
+										<option value="IL">IL</option>
+										<option value="IN">IN</option>
+										<option value="IA">IA</option>
+										<option value="KS">KS</option>
+										<option value="KY">KY</option>
+										<option value="LA">LA</option>
+										<option value="ME">ME</option>
+										<option value="MD">MD</option>
+										<option value="MA">MA</option>
+										<option value="MI">MI</option>
+										<option value="MN">MN</option>
+										<option value="MS">MS</option>
+										<option value="MO">MO</option>
+										<option value="MT">MT</option>
+										<option value="NE">NE</option>
+										<option value="NV">NV</option>
+										<option value="NH">NH</option>
+										<option value="NJ">NJ</option>
+										<option value="NM">NM</option>
+										<option value="NY">NY</option>
+										<option value="NC">NC</option>
+										<option value="ND">ND</option>
+										<option value="OH">OH</option>
+										<option value="OK">OK</option>
+										<option value="OR">OR</option>
+										<option value="PA">PA</option>
+										<option value="RI">RI</option>
+										<option value="SC">SC</option>
+										<option value="SD">SD</option>
+										<option value="TN">TN</option>
+										<option value="TX">TX</option>
+										<option value="UT">UT</option>
+										<option value="VT">VT</option>
+										<option value="VA">VA</option>
+										<option value="WA">WA</option>
+										<option value="WV">WV</option>
+										<option value="WI">WI</option>
+										<option value="WY">WY</option>
+										</select>
+									</br>
+									</br>	
+							</div>	
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-6">
+							<div class="center">
+									<!-- Zipcode removed onblur="checkZipcode(this);"-->
+									<label for="zipcode" class="font">Zipcode:</label>
+									<br/>
+									<input id="zipcode" name="zipcode" type="text" 
+										placeholder="#####-####" 
+										size="25" maxlength="10"
+										required="required"/>
+									<p id="zipMsg"></p>
+									<br/>
+									<!-- E-mail removed onblur="checkEmail(this);"-->
+									<label for="email" class="font">E-mail:</label>
+									<br/>
+									<input id="email" name="email" type="email" 
+										size="25" maxlength="25"
+										placeholder="x@x.x"
+										required="required"/>
+									<p id="emailMsg"></p>
+									<br/>
+									<!-- Radio for Gender -->
+									<label class="font">Gender:</label>
+									<br/>
+									<!-- Male -->
+									<input type="radio" name="gender" 
+										  value="male" id="maleGender"
+										  required="required"/>
+									<label for="maleGender" class="font">Male</label>
+									<br/>
+									<!-- Female -->
+									<input type="radio" name="gender" 
+										value="female" id="femaleGender"
+										required="required"/> 
+									<label for="femaleGender" class="font">Female</label>
+									<br/>
+									<!-- Other Gender -->
+									<input type="radio" name="gender" 
+										value="other" id="otherGender
+										required="required""/> 
+									<label for="otherGender" class="font">Other</label>
+									<br/>
+									<!-- Radio for Martial Status -->
+									<label class="font">Martital Status:</label>
+									<br/>
+									<!-- Single -->
+									<input type="radio" name="maritalstat" 
+										  value="single" id="single"
+										  required="required"/>
+									<label for="single" class="font">Single</label>
+									<br/>
+									<!-- Married -->
+									<input type="radio" name="maritalstat" 
+										value="married" id="married"
+										required="required"/> 
+									<label for="married" class="font">Married</label>
+									<br/>
+									<!-- Date of Birth -->
+									<label for="dob" class="font">Date of Birth:</label>
+									<br/>
+									<input id="dob" name="dob" type="date"
+										placeholder="MM/DD/YYYY" 						
+										required="required"/>
+									<br/>
+									<!-- Phone Number removed onblur="checkPhoneNum(this);"-->
+									<label for="phonenum" class="font">Phone Number:</label>
+									<br/>
+									<input id="phonenum" name="phonenum" type="text" 
+										placeholder="###-###-####" 
+										size="25" maxlength="12"
+										required="required"/>
+										<p id="phoneMsg"></p>
+									<br/>
+									<br/>
+									<!-- Submit Button -->
+									<input type="submit" value="Submit Form" class="font" id="buttons"/>
+									<br/>
+									<br/>
+									<!-- Reset Button -->
+									<input type="reset" value="Reset Form" class="font" id="buttons"/>
+									<br/>
+									<br/>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<!-- stright border line -->
+				<div class="col-xs-12" id="divider"></div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4" id="footer">
+					<ul>
+						<li><a href="https://en.wikipedia.org/wiki/Halloween" target="_blank" class="static">
+						Wikipedia: Halloween
+						</a></li>
+						<li><a href="https://www.marthastewart.com/1502347/halloween" target="_blank" class="static">
+						Martha Stewart Halloween
+						</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4" id="footer">
+					<ul>
+						<li><a href="https://www.history.com/topics/halloween/history-of-halloween" target="_blank" class="static">
+						History Channel: Halloween
+						</a></li>
+						<li><a href="https://www.goodhousekeeping.com/holidays/halloween-ideas/" target="_blank" class="static">
+						Good Housekeeping Halloween
+						</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4" id="footer">
+					<ul>
+						<li><a href="http://www.halloween-website.com/history.htm" target="_blank" class="static">
+						Halloween Web
+						</a></li>
+						<li><a href="http://www.halloween.com/" target="_blank" class="static">
+						Halloween.com
+						</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<?php
+			//var_dump($isValid);
+			if ($isValid) {
+				?>
+				<form id="hiddenForm" name="hiddenForm" 
+					method="POST" action="confirmation.php">
+					<?php
+						foreach($_POST as $key => $value) {
+							?>
+							<input name="<?php echo $key;?>" 
+								value="<?php echo $value;?>" 
+								type="hidden"/>
+							<?php
+						}
+					?>
+				</form>
+
+				<?php
+			}
+		?>
+		
+	</body>
+</html>
